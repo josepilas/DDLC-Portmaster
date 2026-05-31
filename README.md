@@ -22,14 +22,6 @@ legally obtained DDLC 1.1.1 files.
 - Local save/persistent routing inside `ddlc/saves`.
 - Asset validation tools in `ddlc/tools`.
 
-## What Is Not Included
-
-- Original DDLC `.rpa` archives.
-- Original DDLC `.chr` character files.
-- Any automatic asset downloader.
-- Development-only desktop test scripts.
-- Internal audit/dev notes.
-
 ## Install
 
 Install through PortMaster if your firmware supports ZIP installation, or copy
@@ -164,9 +156,6 @@ folder.
 
 ## Known Limitations
 
-- Final hardware validation is still required on real R36S/R36H devices.
-- QEMU ARM64 smoke testing passed, but it was headless and did not test real
-  GPU, audio, display, or physical controls.
 - The `aarch64` runtime path has been smoke-tested; `armhf` still needs real
   device/rootfs testing.
 - The 4:3 mode is safe compatibility scaling, not a full native 4:3 rewrite of
