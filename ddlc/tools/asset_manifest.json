@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "asset_root": "ddlc/original",
+  "files": [
+    {
+      "name": "audio_archive",
+      "path": "original/game/audio.rpa",
+      "required": true,
+      "expected_size": 65683283,
+      "hash": ""
+    },
+    {
+      "name": "images_archive",
+      "path": "original/game/images.rpa",
+      "required": true,
+      "expected_size": 137750644,
+      "hash": ""
+    },
+    {
+      "name": "scripts_archive",
+      "path": "original/game/scripts.rpa",
+      "required": true,
+      "expected_size": 2708885,
+      "hash": ""
+    },
+    {
+      "name": "fonts_archive",
+      "path": "original/game/fonts.rpa",
+      "required": true,
+      "expected_size": 1831581,
+      "hash": ""
+    },
+    {
+      "name": "monika_character",
+      "path": "original/characters/monika.chr",
+      "required": true,
+      "expected_size": 137604,
+      "hash": ""
+    },
+    {
+      "name": "sayori_character",
+      "path": "original/characters/sayori.chr",
+      "required": true,
+      "expected_size": 59621,
+      "hash": ""
+    },
+    {
+      "name": "natsuki_character",
+      "path": "original/characters/natsuki.chr",
+      "required": true,
+      "expected_size": 44793,
+      "hash": ""
+    },
+    {
+      "name": "yuri_character",
+      "path": "original/characters/yuri.chr",
+      "required": true,
+      "expected_size": 30340,
+      "hash": ""
+    }
+  ]
+}

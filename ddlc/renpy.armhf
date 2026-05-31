@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+
+HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+export RENPY_PLATFORM=linux-armv7l
+exec "$HERE/runtime/renpy-7.5.3-arm/renpy.sh" "$@"

@@ -1,0 +1,39 @@
+{
+  "version": 4,
+  "name": "ddlc_portmaster.zip",
+  "items": [
+    "DDLC.sh",
+    "ddlc"
+  ],
+  "items_opt": [],
+  "attr": {
+    "title": "Doki Doki Literature Club",
+    "porter": [
+      "Community compatibility wrapper"
+    ],
+    "desc": "Unofficial PortMaster port wrapper for Doki Doki Literature Club. Tuned for RK3326 handhelds such as R36S/R36H. Requires the user's own original DDLC 1.1.1 assets.",
+    "desc_md": "An unofficial PortMaster port wrapper for Doki Doki Literature Club. It includes a bundled Ren'Py 7.5.3 ARM runtime, R36S/R36H/RK3326 hardware profiles, handheld controls, virtual keyboard support, a virtual character file manager, local saves, and 16:9 / 4:3 display handling. Original DDLC assets are not included.",
+    "inst": "Copy your original DDLC 1.1.1 .rpa archives into ddlc/original/game and the four .chr files into ddlc/original/characters, then run DDLC.sh from Ports.",
+    "inst_md": "Copy your original DDLC 1.1.1 `.rpa` archives into `ddlc/original/game` and the four `.chr` files into `ddlc/original/characters`, then run `DDLC.sh` from Ports.",
+    "genres": [
+      "visual novel"
+    ],
+    "image": {},
+    "rtr": false,
+    "exp": false,
+    "runtime": null,
+    "store": [
+      {
+        "name": "Itch.io",
+        "url": "https://teamsalvato.itch.io/ddlc"
+      }
+    ],
+    "availability": "free",
+    "reqs": [],
+    "arch": [
+      "aarch64",
+      "armhf"
+    ],
+    "min_glibc": ""
+  }
+}

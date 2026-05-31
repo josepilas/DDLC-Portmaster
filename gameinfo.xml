@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gameList>
+  <game>
+    <path>./DDLC.sh</path>
+    <name>Doki Doki Literature Club</name>
+    <desc>Unofficial asset-free PortMaster port wrapper with Ren'Py 7.5.3 ARM runtime, R36S/R36H hardware profiles, handheld controls, and user-supplied DDLC files.</desc>
+    <image>./screenshot.png</image>
+    <developer>Team Salvato</developer>
+    <publisher>Unofficial community wrapper</publisher>
+    <genre>Visual Novel</genre>
+    <releasedate>20170922T000000</releasedate>
+    <players>1</players>
+  </game>
+</gameList>

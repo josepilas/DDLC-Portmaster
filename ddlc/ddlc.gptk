@@ -1,0 +1,29 @@
+# Initial gptokeyb mapping for the DDLC PortMaster wrapper.
+#
+# gptokeyb syntax can vary between PortMaster environments. Treat this as a
+# structured starter profile and adjust after testing on the target device.
+#
+# Goals:
+#   A      -> Enter / click
+#   B      -> Escape or Backspace
+#   D-Pad  -> Arrow keys
+#   Start  -> Escape / menu; virtual keyboard treats it as OK
+#   Select -> F9; opens the large quick panel, cancels virtual keyboard
+#   X      -> F10; opens the fake file manager globally, Space in keyboard
+#   Y      -> H; Ren'Py hide text globally, Case toggle in keyboard
+#   L/R    -> PageUp/PageDown for rollback/advance style navigation
+
+a = enter
+b = backspace
+x = f10
+y = h
+start = escape
+select = f9
+up = up
+down = down
+left = left
+right = right
+l1 = pageup
+r1 = pagedown
+l2 = pageup
+r2 = pagedown
