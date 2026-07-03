@@ -1,0 +1,76 @@
+# DDLC PortMaster - user_configs.txt
+#
+# Edit this file on your computer before playing.
+# Change only the value after "=". Lines starting with "#" are ignored.
+#
+# DEVICE PROFILE
+# device_profile:
+#   0 = auto detect
+#   1 = R36S / 640x480 vertical 4:3
+#   2 = R36H / 640x480 horizontal 4:3
+#   3 = R36H wide / 16:9
+#   4 = generic RK3326
+device_profile=0
+#
+# RESOLUTION
+# resolution_mode:
+#   0 = auto detect, recommended
+#   1 = 640x480 4:3, recommended for R36S/R36H 4:3
+#   2 = 1280x720 16:9, wide devices
+#   3 = 960x720 4:3, sharper but heavier than 640x480
+#   4 = custom, uses custom_width and custom_height below
+resolution_mode=0
+custom_width=640
+custom_height=480
+#
+# custom_aspect is only used by resolution_mode=4:
+#   0 = auto
+#   1 = 4:3
+#   2 = 16:9
+custom_aspect=0
+#
+# aspect_scale:
+#   1 = fit, no cropping, recommended
+#   2 = stretch, fills 4:3 screens but distorts the image
+aspect_scale=1
+#
+# fullscreen:
+#   0 = windowed
+#   1 = fullscreen, recommended
+fullscreen=1
+#
+# PERFORMANCE
+# performance_mode:
+#   0 = auto
+#   1 = low, recommended for R36S/R36H/RK3326
+#   2 = balanced
+#   3 = quality
+performance_mode=0
+#
+# menu_optimization:
+#   0 = auto, recommended
+#   1 = force static menu background + no particles
+#   2 = force original animated DDLC menu
+menu_optimization=0
+#
+# fps_limit:
+#   0 = auto, recommended
+#   30 = recommended for RK3326 handhelds
+#   60 = smoother but heavier
+fps_limit=0
+#
+# quick_menu:
+#   0 = hidden, recommended for handheld buttons
+#   1 = visible touch quick menu
+quick_menu=0
+#
+# virtual_keyboard:
+#   0 = use normal Ren'Py text input
+#   1 = use controller-friendly virtual keyboard, recommended
+virtual_keyboard=1
+#
+# clear_cache:
+#   0 = auto, recommended
+#   1 = clear Ren'Py cache every launch
+#   2 = never clear cache
+clear_cache=0

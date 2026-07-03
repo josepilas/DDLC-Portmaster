@@ -3,16 +3,22 @@
 cat <<'EOF'
 This wrapper does not download, extract, or install original DDLC assets.
 
-Please copy files from your own original DDLC installation into:
+Please copy or extract your own DDLC installation root into:
+
+  ddlc/original/
+
+Examples:
 
   ddlc/original/game/audio.rpa
-  ddlc/original/game/images.rpa
-  ddlc/original/game/scripts.rpa
-  ddlc/original/game/fonts.rpa
   ddlc/original/characters/monika.chr
-  ddlc/original/characters/sayori.chr
-  ddlc/original/characters/natsuki.chr
-  ddlc/original/characters/yuri.chr
+
+or:
+
+  ddlc/original/DDLC-1.1.1-pc/game/audio.rpa
+  ddlc/original/DDLC-1.1.1-pc/characters/monika.chr
+
+Mods/translations can be applied inside ddlc/original the same way they are
+applied to a normal DDLC PC folder.
 
 After copying, run:
 

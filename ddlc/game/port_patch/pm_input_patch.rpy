@@ -7,7 +7,7 @@ init -970 python:
         if length is None:
             length = 64
 
-        if pm_is_portmaster or pm_is_desktop_test:
+        if (pm_is_portmaster or pm_is_desktop_test) and PM_USE_VIRTUAL_KEYBOARD:
             value = pm_virtual_input(
                 prompt=prompt,
                 default=default,

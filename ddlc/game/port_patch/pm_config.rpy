@@ -5,6 +5,11 @@ init -999 python:
         value = os.environ.get(name, "")
         return value.lower() in ("1", "true", "yes", "on")
 
+    def pm_env_flag_default(name, default_value):
+        if name in os.environ:
+            return pm_env_flag(name)
+        return default_value
+
     def pm_env_int(name, default_value=None, minimum=None, maximum=None):
         try:
             value = int(str(os.environ.get(name, "")).strip())
@@ -22,7 +27,7 @@ init -999 python:
         return str(os.environ.get(name, default_value) or default_value).strip().lower()
 
     PM_PORT_NAME = "DDLC PortMaster Compatibility Wrapper"
-    PM_PORT_VERSION = "0.5.0"
+    PM_PORT_VERSION = "0.8.12"
     PM_BASE_VIRTUAL_WIDTH = 1280
     PM_BASE_VIRTUAL_HEIGHT = 720
     PM_FOUR_THREE_FALLBACK_WIDTH = 960
@@ -41,10 +46,13 @@ init -999 python:
     if PM_PERFORMANCE_PROFILE not in ("low", "balanced", "quality"):
         PM_PERFORMANCE_PROFILE = "balanced"
     PM_IMAGE_CACHE_SIZE = pm_env_int("PM_IMAGE_CACHE_SIZE", None, 8, 128)
+    PM_IMAGE_CACHE_SIZE_MB = pm_env_int("PM_IMAGE_CACHE_SIZE_MB", None, 32, 512)
     PM_PREDICT_STATEMENTS = pm_env_int("PM_PREDICT_STATEMENTS", None, 4, 100)
     PM_FRAMERATE = pm_env_int("PM_FRAMERATE", None, 15, 100)
     PM_GL_FRAMERATE = pm_env_int("PM_GL_FRAMERATE", None, 15, 100)
     PM_GL_POWERSAVE = not pm_env_flag("PM_DISABLE_GL_POWERSAVE")
+    PM_MENU_OPTIMIZE = pm_env_flag("PM_MENU_OPTIMIZE")
+    PM_USE_VIRTUAL_KEYBOARD = pm_env_flag_default("PM_USE_VIRTUAL_KEYBOARD", True)
     PM_NAME_ALLOWED_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
     PM_REQUIRED_ASSETS = (

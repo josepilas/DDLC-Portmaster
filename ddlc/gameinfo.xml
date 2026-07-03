@@ -4,7 +4,7 @@
     <path>./DDLC.sh</path>
     <name>Doki Doki Literature Club</name>
     <desc>Unofficial asset-free PortMaster port wrapper with Ren'Py 7.5.3 ARM runtime, R36S/R36H hardware profiles, handheld controls, and user-supplied DDLC files.</desc>
-    <image>./screenshot.png</image>
+    <image>./ddlc/screenshot.png</image>
     <developer>Team Salvato</developer>
     <publisher>Unofficial community wrapper</publisher>
     <genre>Visual Novel</genre>

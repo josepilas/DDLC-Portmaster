@@ -156,6 +156,53 @@ class RPAv3ArchiveHandler(object):
 archive_handlers.append(RPAv3ArchiveHandler)
 
 
+class RPEArchiveHandler(object):
+    """
+    Archive handler for VNX/RPE archives used by some DDLC translations.
+    """
+
+    archive_extension = ".rpx"
+
+    @staticmethod
+    def get_supported_extensions():
+        return [ ".rpx", ".rpa" ]
+
+    @staticmethod
+    def get_supported_headers():
+        return [ b"RPE-1.0 " ]
+
+    @staticmethod
+    def read_index(infile):
+        line = infile.readline()
+        parts = line.split()
+        header_key = int(parts[1], 16)
+        key = header_key ^ 0xffffffff
+        offset = int(parts[2], 16)
+
+        infile.seek(offset)
+        index = loads(zlib.decompress(infile.read()))
+
+        def start_to_bytes(s):
+            if not s:
+                return b''
+
+            if not isinstance(s, bytes):
+                s = s.encode("latin-1")
+
+            return s
+
+        for k in index.keys():
+            if len(index[k][0]) == 2:
+                index[k] = [ (offset ^ key, dlen ^ key) for offset, dlen in index[k] ]
+            else:
+                index[k] = [ (offset ^ key, dlen ^ key, start_to_bytes(start)) for offset, dlen, start in index[k] ]
+
+        return index
+
+
+archive_handlers.append(RPEArchiveHandler)
+
+
 class RPAv2ArchiveHandler(object):
     """
     Archive handler handling RPAv2 archives.
@@ -259,7 +306,7 @@ def index_archives():
                         if file_header.startswith(header):
                             f.seek(0, 0)
                             index = handler.read_index(f)
-                            archives.append((prefix + handler.archive_extension, index))
+                            archives.append((prefix + ext, index))
                             archive_handled = True
                             break
                     if archive_handled == True:

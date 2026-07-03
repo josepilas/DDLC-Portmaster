@@ -33,6 +33,9 @@ init 1002 python:
         if PM_IMAGE_CACHE_SIZE is not None:
             config.image_cache_size = PM_IMAGE_CACHE_SIZE
 
+        if PM_IMAGE_CACHE_SIZE_MB is not None:
+            config.image_cache_size_mb = PM_IMAGE_CACHE_SIZE_MB
+
         if PM_PREDICT_STATEMENTS is not None:
             config.predict_statements = PM_PREDICT_STATEMENTS
 
@@ -46,15 +49,26 @@ init 1002 python:
         except Exception as exc:
             pm_log("Could not apply GL performance preferences: {0}".format(exc))
 
+        if PM_MENU_OPTIMIZE:
+            try:
+                renpy.image("menu_bg", "gui/menu_bg.png")
+                renpy.image("game_menu_bg", "gui/menu_bg.png")
+                renpy.image("menu_particles", Null())
+                pm_log("handheld menu optimization enabled: static menu backgrounds, particles disabled")
+            except Exception as exc:
+                pm_log("Could not apply menu optimization: {0}".format(exc))
+
         pm_log(
-            "handheld mode={0} touch_quick_menu={1} performance={2} image_cache={3} predict={4} framerate={5} gl_framerate={6}".format(
+            "handheld mode={0} touch_quick_menu={1} performance={2} image_cache={3} image_cache_mb={4} predict={5} framerate={6} gl_framerate={7} menu_optimize={8}".format(
                 pm_handheld_mode,
                 pm_show_touch_quick_menu,
                 PM_PERFORMANCE_PROFILE,
                 config.image_cache_size,
+                getattr(config, "image_cache_size_mb", None),
                 config.predict_statements,
                 config.framerate,
                 getattr(renpy.game.preferences, "gl_framerate", None),
+                PM_MENU_OPTIMIZE,
             )
         )
 
