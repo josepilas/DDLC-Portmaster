@@ -1,6 +1,6 @@
 # DDLC PortMaster Compatibility Wrapper
 
-![](https://files.catbox.moe/96sb6r.webp)
+<img src="https://files.catbox.moe/96sb6r.webp" width="400" height="400" alt="Imagem">
 
 Unofficial, asset-free PortMaster wrapper for running a user-owned copy of
 Doki Doki Literature Club on handheld Linux devices.
